@@ -1,0 +1,16 @@
+# Allow all web robots
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://balihelp.com/sitemap.xml
+
+# Disallow certain paths if needed
+# Disallow: /private/
+# Disallow: /admin/
+
+# Crawl-delay for better server performance
+Crawl-delay: 1
+
+# Preferred host
+Host: https://balihelp.com
