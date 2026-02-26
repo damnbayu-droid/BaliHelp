@@ -1,6 +1,6 @@
 export function getAllStructuredData() {
   const baseUrl = 'https://balihelp.com';
-  
+
   const organizationSchema = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
@@ -168,7 +168,7 @@ export function getAllStructuredData() {
       {
         '@type': 'Question',
         name: 'Can I get a work visa (KITAS) through my company?',
-        'acceptedAnswer: 'Yes, as a foreign shareholder or director, you can apply for an investor KITAS which allows you to live and work in Indonesia.'
+        acceptedAnswer: 'Yes, as a foreign shareholder or director, you can apply for an investor KITAS which allows you to live and work in Indonesia.'
       }
     ]
   };

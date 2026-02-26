@@ -35,7 +35,7 @@ export default function VisaServicesSection() {
             id="visa-section-heading"
             className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4"
           >
-            Complete Visa Solutions
+            Bali Visa Services & Extensions
           </h2>
           <p className="text-lg text-slate-600 dark:text-slate-300">
             From short-term visits to long-term residency, we provide comprehensive visa services for all your Indonesia immigration needs.

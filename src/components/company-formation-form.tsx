@@ -11,7 +11,7 @@ import {
 } from '@/components/ui/dialog';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { X, ArrowRight, Plus, Minus, FileText, Phone, Mail, Globe } from 'lucide-react';
+import { X, ArrowRight, Plus, Minus, FileText, Phone, Mail, Globe, Users } from 'lucide-react';
 
 interface Shareholder {
   id: number;
@@ -61,7 +61,10 @@ export default function CompanyFormationForm() {
     const newShareholder: Shareholder = {
       id: shareholders.length + 1,
       type: 'shareholder',
-      percentage: ''
+      percentage: '',
+      phone: '',
+      email: '',
+      address: ''
     };
     setShareholders([...shareholders, newShareholder]);
   };
@@ -73,7 +76,7 @@ export default function CompanyFormationForm() {
   };
 
   const updateShareholder = (id: number, field: string, value: string) => {
-    setShareholders(shareholders.map(s => 
+    setShareholders(shareholders.map(s =>
       s.id === id ? { ...s, [field]: value } : s
     ));
   };
@@ -392,7 +395,7 @@ export default function CompanyFormationForm() {
                       <Input
                         placeholder="Complete address with city and postal code"
                         value={shareholder.address}
-                        onChange={(e) updateShareholder(shareholder.id, 'address', e.target.value)}
+                        onChange={(e) => updateShareholder(shareholder.id, 'address', e.target.value)}
                         className="h-9 text-sm bg-white dark:bg-slate-700 border-slate-300 dark:border-slate-600"
                       />
                     </div>

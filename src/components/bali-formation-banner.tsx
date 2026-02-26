@@ -1,14 +1,18 @@
 'use client';
 
+import Image from 'next/image';
+
 export default function BaliFormationBanner() {
   return (
     <section className="relative h-[500px] lg:h-[600px] w-full overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
-        <img
+        <Image
           src="/banner-bali-formation.png"
           alt="Company Formation in Bali - Rice fields and beach view"
-          className="w-full h-full object-cover"
+          fill
+          priority
+          className="object-cover"
         />
         {/* Overlay for text readability */}
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-purple-900/70 to-slate-900/90" />

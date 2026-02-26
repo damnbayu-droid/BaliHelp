@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
@@ -63,6 +64,7 @@ import VisaServicesSection from '@/components/visa-services-section';
 import FAQSection from '@/components/faq-section';
 import CompanyFormationForm from '@/components/company-formation-form';
 import CompanyFormationModal from '@/components/company-formation-modal';
+import GoogleReviews from '@/components/google-reviews';
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -74,7 +76,7 @@ export default function Home() {
   const [selectedVisa, setSelectedVisa] = useState<VisaService | null>(null);
   const [activeSection, setActiveSection] = useState('hero');
   const [isFormationModalOpen, setIsFormationModalOpen] = useState(false);
-  
+
   // Mobile header animation and hold detection
   const [showMobileHeader, setShowMobileHeader] = useState(false);
   const [holdTimer, setHoldTimer] = useState<NodeJS.Timeout | null>(null);
@@ -111,7 +113,7 @@ export default function Home() {
       document.documentElement.classList.remove('dark');
     }
   }, [isDarkMode]);
-  
+
   // Show mobile header after 3 seconds
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -119,7 +121,7 @@ export default function Home() {
     }, 3000);
     return () => clearTimeout(timer);
   }, []);
-  
+
   // Handle hold detection for mobile language change
   const handleMouseDown = () => {
     setIsHolding(true);
@@ -129,15 +131,15 @@ export default function Home() {
     }, 3000);
     setHoldTimer(timer);
   };
-  
+
   const handleMouseUp = () => {
     setIsHolding(false);
     if (holdTimer) {
-      clearTimeout(hholdTimer);
+      clearTimeout(holdTimer);
       setHoldTimer(null);
     }
   };
-  
+
   // Handle click for theme toggle (short press)
   const handleClick = () => {
     if (!isHolding) {
@@ -174,11 +176,10 @@ export default function Home() {
     <div className="min-h-screen bg-white dark:bg-slate-950">
       {/* Header */}
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled
-            ? 'bg-white/95 dark:bg-slate-950/95 backdrop-blur-sm shadow-md'
-            : 'bg-transparent'
-        }`}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
+          ? 'bg-white/95 dark:bg-slate-950/95 backdrop-blur-sm shadow-md'
+          : 'bg-transparent'
+          }`}
         role="banner"
       >
         <nav
@@ -196,11 +197,13 @@ export default function Home() {
                 Bali Help
               </span>
               {/* Mobile: Logo Image Only */}
-              <div className="lg:hidden w-10 h-10 flex items-center justify-center">
-                <img 
+              <div className="lg:hidden relative w-10 h-10 flex items-center justify-center">
+                <Image
                   src="/logo.png"
                   alt="Bali Help Logo"
-                  className="w-full h-full object-contain"
+                  fill
+                  priority
+                  className="object-contain"
                 />
               </div>
             </a>
@@ -211,11 +214,10 @@ export default function Home() {
                 <a
                   key={link.name}
                   href={link.href}
-                  className={`text-sm font-medium transition-colors ${
-                    activeSection === link.href.replace('#', '')
-                      ? 'text-purple-700 dark:text-purple-400'
-                      : 'text-slate-700 dark:text-slate-200 hover:text-purple-600 dark:hover:text-purple-400'
-                  }`}
+                  className={`text-sm font-medium transition-colors ${activeSection === link.href.replace('#', '')
+                    ? 'text-purple-700 dark:text-purple-400'
+                    : 'text-slate-700 dark:text-slate-200 hover:text-purple-600 dark:hover:text-purple-400'
+                    }`}
                 >
                   {link.name}
                 </a>
@@ -242,8 +244,8 @@ export default function Home() {
                 {/* Language Menu - Shows after holding */}
                 {showLanguageMenu && (
                   <div className="absolute right-0 top-full mt-2 bg-white dark:bg-slate-800 rounded-xl shadow-2xl border border-slate-200 dark:border-slate-700 p-2 min-w-[200px]">
-                    <LanguageDropdown 
-                      currentLanguage={currentLanguage} 
+                    <LanguageDropdown
+                      currentLanguage={currentLanguage}
                       onLanguageChange={(lang) => {
                         setCurrentLanguage(lang);
                         setShowLanguageMenu(false);
@@ -268,9 +270,9 @@ export default function Home() {
                 {/* Language Dropdown - Shows on Hover */}
                 <div className="absolute right-0 top-full mt-2 hidden group-hover:block">
                   <div className="bg-white dark:bg-slate-800 rounded-xl shadow-2xl border border-slate-200 dark:border-slate-700 p-2 min-w-[200px]">
-                    <LanguageDropdown 
-                      currentLanguage={currentLanguage} 
-                      onLanguageChange={setCurrentLanguage} 
+                    <LanguageDropdown
+                      currentLanguage={currentLanguage}
+                      onLanguageChange={setCurrentLanguage}
                     />
                   </div>
                 </div>
@@ -325,11 +327,10 @@ export default function Home() {
 
       {/* Mobile CTA Bar - Slides down after 3 seconds */}
       <div
-        className={`lg:hidden fixed top-16 left-0 right-0 z-40 bg-white/95 dark:bg-slate-950/95 backdrop-blur-sm border-b border-slate-200 dark:border-slate-700 shadow-lg transition-all duration-500 ease-out ${
-          showMobileHeader
-            ? 'translate-y-0 opacity-100'
-            : '-translate-y-full opacity-0'
-        }`}
+        className={`lg:hidden fixed top-16 left-0 right-0 z-40 bg-white/95 dark:bg-slate-950/95 backdrop-blur-sm border-b border-slate-200 dark:border-slate-700 shadow-lg transition-all duration-500 ease-out ${showMobileHeader
+          ? 'translate-y-0 opacity-100'
+          : '-translate-y-full opacity-0'
+          }`}
         role="complementary"
         aria-label="Quick actions"
       >
@@ -385,9 +386,9 @@ export default function Home() {
                 id="hero-heading"
                 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 dark:text-white leading-tight mb-6"
               >
-                Start Your Business in Bali
-                <span className="block mt-2 bg-gradient-to-r from-purple-700 via-purple-800 to-purple-900 bg-clip-text text-transparent">
-                  With Confidence
+                Company Formation & <br />
+                <span className="bg-gradient-to-r from-purple-700 via-purple-800 to-purple-900 bg-clip-text text-transparent">
+                  Business Registration in Bali
                 </span>
               </h1>
 
@@ -470,7 +471,7 @@ export default function Home() {
                 id="why-bali-heading"
                 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4"
               >
-                Why Company Formation in Bali?
+                Why Choose Company Formation in Bali?
               </h2>
               <p className="text-lg text-slate-600 dark:text-slate-300">
                 Indonesia's digital economy is booming, and Bali offers the perfect blend of business opportunity and lifestyle.
@@ -513,7 +514,7 @@ export default function Home() {
                 id="services-heading"
                 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4"
               >
-                Company Formation Services
+                Professional Business Setup & Registration
               </h2>
               <p className="text-lg text-slate-600 dark:text-slate-300">
                 Comprehensive business setup and compliance solutions for establishing your company in Indonesia.
@@ -645,7 +646,7 @@ export default function Home() {
                 id="packages-heading"
                 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4"
               >
-                Choose Your Package
+                PT PMA & Business Setup Packages
               </h2>
               <p className="text-lg text-slate-600 dark:text-slate-300">
                 Transparent pricing with comprehensive service bundles tailored to your needs.
@@ -657,11 +658,10 @@ export default function Home() {
                 <Dialog key={pkg.id}>
                   <DialogTrigger asChild>
                     <Card
-                      className={`relative p-8 rounded-2xl border-2 transition-all hover:shadow-xl cursor-pointer ${
-                        pkg.popular
-                          ? 'border-purple-500 bg-gradient-to-b from-purple-50 to-white dark:from-purple-950/20 dark:to-slate-800 shadow-lg shadow-purple-500/10'
-                          : 'border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800'
-                      }`}
+                      className={`relative p-8 rounded-2xl border-2 transition-all hover:shadow-xl cursor-pointer ${pkg.popular
+                        ? 'border-purple-500 bg-gradient-to-b from-purple-50 to-white dark:from-purple-950/20 dark:to-slate-800 shadow-lg shadow-purple-500/10'
+                        : 'border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800'
+                        }`}
                     >
                       {pkg.popular && (
                         <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500 text-white text-sm font-medium flex items-center gap-1 shadow-lg">
@@ -693,11 +693,10 @@ export default function Home() {
                         </ul>
 
                         <Button
-                          className={`w-full h-12 ${
-                            pkg.popular
-                              ? 'bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500 hover:from-yellow-600 hover:via-orange-600 hover:to-red-600 text-white shadow-lg shadow-orange-500/25'
-                              : 'bg-slate-900 dark:bg-white text-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-100'
-                          } font-semibold transition-all`}
+                          className={`w-full h-12 ${pkg.popular
+                            ? 'bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500 hover:from-yellow-600 hover:via-orange-600 hover:to-red-600 text-white shadow-lg shadow-orange-500/25'
+                            : 'bg-slate-900 dark:bg-white text-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-100'
+                            } font-semibold transition-all`}
                         >
                           Get Started
                           <ArrowRight className="ml-2 w-4 h-4" />
@@ -792,7 +791,7 @@ export default function Home() {
                 id="other-services-heading"
                 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4"
               >
-                Additional Business Services
+                PT PMA & Indonesia Business Support
               </h2>
               <p className="text-lg text-slate-600 dark:text-slate-300">
                 Comprehensive support beyond company formation to help your business thrive in Indonesia.
@@ -856,7 +855,7 @@ export default function Home() {
                 id="trust-heading"
                 className="text-3xl sm:text-4xl font-bold mb-4"
               >
-                Trusted by Businesses Worldwide
+                Top Rated Company Registration Service
               </h2>
               <p className="text-lg text-purple-200">
                 Our track record speaks for itself. Join hundreds of successful businesses we've helped establish in Indonesia.
@@ -902,6 +901,9 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Google Reviews Section */}
+        <GoogleReviews />
+
         {/* Contact Section */}
         <section
           id="contact"
@@ -917,7 +919,7 @@ export default function Home() {
                 id="contact-heading"
                 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4"
               >
-                Start Your Business Journey
+                Start Your Bali Company Registration Today
               </h2>
               <p className="text-lg text-slate-600 dark:text-slate-300">
                 Ready to establish your business in Bali? Get in touch with our team for a free consultation.
@@ -946,8 +948,7 @@ export default function Home() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-slate-900 dark:text-white mb-1">Call Us</h3>
-                      <p className="text-sm text-slate-600 dark:text-slate-400">+62 361 123 4567</p>
-                      <p className="text-sm text-slate-600 dark:text-slate-400">WhatsApp: +62 812 3456 7890</p>
+                      <p className="text-sm text-slate-600 dark:text-slate-400">WhatsApp/Call: +62 857 2704 1992</p>
                     </div>
                   </div>
                 </Card>
@@ -960,8 +961,8 @@ export default function Home() {
                     <div>
                       <h3 className="font-semibold text-slate-900 dark:text-white mb-1">Visit Us</h3>
                       <p className="text-sm text-slate-600 dark:text-slate-400">
-                        Jl. Raya Ubud No. 123<br />
-                        Gianyar, Bali 80571<br />
+                        Jl. Tibungsari No. 11C<br />
+                        Denpasar, Bali 80117<br />
                         Indonesia
                       </p>
                     </div>

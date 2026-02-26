@@ -11,11 +11,10 @@ export default function CTASection({ mode = 'light' }: CTASectionProps) {
   return (
     <section
       id={mode === 'light' ? 'cta-light' : 'cta-dark'}
-      className={`py-20 lg:py-28 ${
-        mode === 'dark'
+      className={`py-20 lg:py-28 ${mode === 'dark'
           ? 'bg-slate-900 text-white'
           : 'bg-gradient-to-br from-purple-50 via-purple-100/50 to-orange-50/30 text-slate-900'
-      }`}
+        }`}
       aria-labelledby="cta-heading"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -41,7 +40,7 @@ export default function CTASection({ mode = 'light' }: CTASectionProps) {
             {mode === 'light' && (
               <Button
                 size="lg"
-                variant={mode === 'dark' ? 'outline' : 'default'}
+                variant="outline"
                 className="h-14 px-8 text-lg font-semibold rounded-xl transition-all bg-white border-2 border-purple-300 text-purple-700 hover:bg-purple-50"
                 onClick={() => document.getElementById('packages')?.scrollIntoView({ behavior: 'smooth' })}
               >
