@@ -51,7 +51,7 @@ export default function Footer() {
                 <div className="flex flex-col gap-1">
                   <a href="mailto:info@bali.enterprises" className="hover:text-white transition-colors">info@bali.enterprises</a>
                   <a href="mailto:contact@indonesianvisas.agency" className="hover:text-white transition-colors">contact@indonesianvisas.agency</a>
-                  <a href="mailto:support@visas.agency" className="hover:text-white transition-colors">support@visas.agency</a>
+                  <a href="mailto:indonesian@visas.agency" className="hover:text-white transition-colors">indonesian@visas.agency</a>
                 </div>
               </li>
             </ul>
@@ -72,9 +72,9 @@ export default function Footer() {
 
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4 mt-8 pt-8 border-t border-slate-800">
             <div className="flex gap-4 text-sm">
-              <a href="https://indonesianvisas.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">indonesianvisas.com</a>
+              <a href="https://bali.enterprises" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">bali.enterprises</a>
               <span className="text-slate-600">|</span>
-              <a href="https://mybisnis.app" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">mybisnis.app</a>
+              <a href="https://indonesianvisas.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">indonesianvisas.com</a>
               <span className="text-slate-600">|</span>
               <a href="https://indodesign.web" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">indodesign.web</a>
             </div>

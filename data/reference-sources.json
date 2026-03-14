@@ -1,0 +1,14 @@
+{
+  "sources": [
+    {"name":"Indonesia OSS System","type":"government","url":"https://oss.go.id","description":"Online Single Submission platform for business licensing"},
+    {"name":"BKPM / Ministry of Investment","type":"government","url":"https://bkpm.go.id","description":"Indonesia Investment Coordinating Board"},
+    {"name":"Ministry of Law and Human Rights","type":"government","url":"https://www.kemenkumham.go.id","description":"Company registration and legal entity approval"},
+    {"name":"Directorate General of Taxes","type":"government","url":"https://www.pajak.go.id","description":"Indonesian tax authority and NPWP registration"},
+    {"name":"Indonesia Company Law No. 40/2007","type":"legislation","url":"https://peraturan.bpk.go.id","description":"Primary law governing company establishment"},
+    {"name":"Investment Law No. 25/2007","type":"legislation","url":"https://peraturan.bpk.go.id","description":"Foreign and domestic investment regulations"},
+    {"name":"Omnibus Law on Job Creation 2020","type":"legislation","url":"https://peraturan.bpk.go.id","description":"Major regulatory reform for business and investment"},
+    {"name":"Presidential Regulation on Investment List","type":"legislation","url":"https://peraturan.bpk.go.id","description":"Positive Investment List for foreign ownership sectors"},
+    {"name":"Indonesian Visas Agency","type":"partner","url":"https://indonesianvisas.com","description":"Visa and immigration services provider"},
+    {"name":"BPS Statistics Indonesia","type":"government","url":"https://www.bps.go.id","description":"Indonesian national statistics and economic data"}
+  ]
+}

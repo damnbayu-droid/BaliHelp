@@ -1,0 +1,61 @@
+import { Guide } from './guides-data';
+
+// Cluster 1: Company Formation Indonesia
+export const cluster1Guides: Guide[] = [
+  {
+    slug: 'what-is-pt-pma',
+    title: 'What is PT PMA in Indonesia?',
+    metaTitle: 'What is PT PMA? | Foreign Company Registration Indonesia',
+    metaDescription: 'Learn what PT PMA is, how foreign-owned companies work in Indonesia, legal requirements, ownership structure, and registration process for international investors.',
+    cluster: 'Company Formation',
+    relatedSlugs: ['how-to-start-company-in-bali','minimum-investment-pt-pma','local-pt-vs-pt-pma','can-foreigners-own-company-indonesia'],
+    sections: [
+      { heading: 'Introduction to PT PMA', content: 'PT PMA (Penanaman Modal Asing) is the legal entity structure that allows foreign investors to own and operate a company in Indonesia. Established under Indonesian Investment Law No. 25 of 2007, PT PMA provides a transparent framework for foreign direct investment across approved business sectors. As Indonesia continues to attract global entrepreneurs, understanding the PT PMA structure is essential for anyone planning to do business in Bali or elsewhere in the archipelago.' },
+      { heading: 'Definition and Legal Basis', content: 'PT PMA stands for Perseroan Terbatas Penanaman Modal Asing, which translates to Foreign Capital Investment Limited Liability Company. It is governed by the Indonesian Company Law (Law No. 40 of 2007) and the Investment Law. The entity functions as a separate legal person, offering limited liability protection to its shareholders. Unlike a representative office, a PT PMA can generate revenue, hire employees, and engage in commercial activities directly.' },
+      { heading: 'Legal Framework and Regulations', content: 'The legal framework for PT PMA is primarily defined by the Investment Coordinating Board (BKPM), now integrated into the Ministry of Investment. The Positive Investment List (previously the Negative Investment List) outlines which sectors are open, restricted, or closed to foreign ownership. The Omnibus Law on Job Creation (2020) simplified many regulations, making it easier for foreigners to establish companies in Indonesia with reduced bureaucratic barriers.' },
+      { heading: 'Ownership and Shareholder Requirements', content: 'A PT PMA requires a minimum of two shareholders, which can be individuals or legal entities. In many sectors, 100% foreign ownership is permitted. However, certain industries still require Indonesian partners with specific ownership percentages. The minimum authorized capital is IDR 10 billion, with a minimum paid-up capital of IDR 2.5 billion, although these requirements may vary by sector and are subject to regulatory updates.' },
+      { heading: 'Registration Process Overview', content: 'Registering a PT PMA involves several steps: reserving a company name, drafting articles of association with a notary, obtaining approval from the Ministry of Law and Human Rights, registering for a Tax ID (NPWP), and obtaining business licenses through the OSS (Online Single Submission) system. The process typically takes 4 to 8 weeks when handled by experienced professionals.' },
+      { heading: 'Required Documents', content: 'Key documents include: passport copies of all foreign shareholders, proof of domicile address in Indonesia, articles of association, shareholder agreement, company name reservation letter, and capital deposit documentation. If a corporate entity is a shareholder, additional documents such as the parent company\'s certificate of incorporation and board resolution are required.' },
+      { heading: 'Business Sectors Open to Foreign Investment', content: 'Indonesia\'s Positive Investment List identifies sectors fully open to foreign ownership, including technology, consulting, trading, manufacturing, and tourism. Some sectors like media, transportation, and certain retail activities may have ownership caps. It is critical to verify the current regulations as the investment list is updated periodically by the Indonesian government.' },
+      { heading: 'Capital Requirements Explained', content: 'The minimum investment for a PT PMA varies by sector but generally requires IDR 10 billion in authorized capital and IDR 2.5 billion in paid-up capital. Some sectors under the Omnibus Law have reduced capital requirements to encourage foreign investment. Capital can be contributed in cash or assets and must be deposited in an Indonesian bank account in the company\'s name.' },
+      { heading: 'Advantages of PT PMA', content: 'Key advantages include: full legal ownership of a business in Indonesia, limited liability protection, ability to sponsor work visas (KITAS) for foreign employees, access to the Indonesian domestic market, eligibility for government contracts, and the ability to open corporate bank accounts and engage in formal business transactions.' },
+      { heading: 'Common Mistakes When Setting Up PT PMA', content: 'Common errors include: choosing the wrong KBLI business classification code, underestimating capital requirements, failing to understand sector restrictions, not engaging qualified legal and tax advisors, attempting to use nominee shareholders (which is illegal), and neglecting ongoing compliance obligations such as annual reporting and tax filings.' },
+      { heading: 'Timeline and Costs', content: 'A typical PT PMA registration takes 4-8 weeks. Costs vary depending on the complexity of the business structure. Professional service fees typically range from USD 2,000 to USD 5,000, not including the mandatory capital investment. Additional costs include notary fees, virtual office rental, and ongoing compliance expenses.' },
+      { heading: 'Frequently Asked Questions', content: '' },
+    ],
+    faqs: [
+      { question: 'Can a foreigner own 100% of a PT PMA?', answer: 'Yes, in many sectors 100% foreign ownership is permitted under Indonesia\'s Positive Investment List. However, some industries require Indonesian partners.' },
+      { question: 'What is the minimum capital for PT PMA?', answer: 'The standard minimum is IDR 10 billion authorized capital with IDR 2.5 billion paid-up, though this varies by sector.' },
+      { question: 'How long does PT PMA registration take?', answer: 'Typically 4-8 weeks when managed by professional service providers.' },
+      { question: 'Can PT PMA hire foreign employees?', answer: 'Yes, PT PMA can sponsor KITAS work permits for foreign directors and employees.' },
+    ],
+  },
+  {
+    slug: 'how-to-start-company-in-bali',
+    title: 'How to Start a Company in Bali',
+    metaTitle: 'How to Start a Company in Bali | Step-by-Step Guide',
+    metaDescription: 'Complete step-by-step guide to starting a company in Bali. Learn about PT PMA registration, licensing, costs, and requirements for foreign entrepreneurs.',
+    cluster: 'Company Formation',
+    relatedSlugs: ['what-is-pt-pma','how-to-register-company-indonesia','company-registration-timeline','cost-start-business-bali'],
+    sections: [
+      { heading: 'Introduction', content: 'Bali has become one of the most attractive destinations for international entrepreneurs looking to establish a business in Southeast Asia. With its vibrant digital nomad community, growing tourism sector, and improving business infrastructure, Bali offers unique opportunities for foreign investors. This guide walks you through every step of starting a company in Bali, from initial planning to full operational status.' },
+      { heading: 'Why Start a Business in Bali', content: 'Bali offers a unique combination of low operating costs, a growing consumer market, excellent international connectivity, and an unmatched quality of life. The island attracts millions of tourists annually, creating opportunities in hospitality, food and beverage, digital services, wellness, and retail. Additionally, Indonesia\'s government has implemented investor-friendly policies through the Omnibus Law, reducing bureaucratic complexity.' },
+      { heading: 'Choosing Your Business Structure', content: 'Foreign investors typically establish a PT PMA (foreign-owned limited liability company). Alternatively, you may partner with an Indonesian citizen to form a local PT. Other options include representative offices (for market research only) or using a nominee structure (not recommended and legally risky). The PT PMA is the most suitable vehicle for foreigners who want full operational control.' },
+      { heading: 'Step 1: Business Planning', content: 'Before registration, develop a comprehensive business plan that includes your target market, revenue projections, operational requirements, and capital allocation. Identify the correct KBLI (business classification) code for your activities, as this determines your licensing requirements and foreign ownership eligibility.' },
+      { heading: 'Step 2: Name Reservation', content: 'Reserve your company name through the Ministry of Law and Human Rights. The name must be unique, contain at least three words, and not conflict with existing registered companies. This process takes 1-3 business days.' },
+      { heading: 'Step 3: Notary and Articles of Association', content: 'Engage a licensed Indonesian notary to draft the company\'s articles of association (Akta Pendirian). This document defines the company\'s structure, shareholders, directors, commissioners, and business activities. The notary will also certify the shareholder agreement.' },
+      { heading: 'Step 4: Ministry Approval', content: 'Submit the articles of association to the Ministry of Law and Human Rights for approval. Once approved, the company receives its legal entity status (SK Kemenkumham). This approval takes approximately 1-2 weeks.' },
+      { heading: 'Step 5: Tax Registration (NPWP)', content: 'Register for a company Tax Identification Number (NPWP) at the local tax office. The NPWP is mandatory for all business transactions, invoicing, and compliance. Registration typically takes 3-7 business days.' },
+      { heading: 'Step 6: Business Licenses via OSS', content: 'Obtain your NIB (Business Identification Number) and sector-specific licenses through the OSS (Online Single Submission) system. The NIB serves as your primary business license and is required before commencing operations.' },
+      { heading: 'Step 7: Office Address and Domicile', content: 'Secure a physical or virtual office address in Bali. A registered business address is required for company domicile and is used for all official correspondence. Virtual office services are available starting from USD 30-50 per month.' },
+      { heading: 'Step 8: Bank Account Opening', content: 'Open a corporate bank account at a major Indonesian bank. Required documents include the company deed, NPWP, NIB, and director\'s identification. The capital deposit must be made into this account.' },
+      { heading: 'Costs Overview', content: 'Total startup costs for a PT PMA in Bali typically range from USD 3,000-7,000 for professional services, plus the mandatory capital investment (minimum IDR 2.5 billion paid-up). Monthly operational costs including virtual office, basic accounting, and compliance range from USD 200-500.' },
+      { heading: 'Common Pitfalls to Avoid', content: 'Avoid using nominee arrangements, ensure your KBLI codes match your actual business activities, budget for ongoing compliance costs, and engage qualified advisors from the outset. Many foreign entrepreneurs underestimate the time and cost of annual reporting requirements.' },
+    ],
+    faqs: [
+      { question: 'How much does it cost to start a company in Bali?', answer: 'Professional service fees range from USD 3,000-7,000, plus mandatory capital investment starting at IDR 2.5 billion.' },
+      { question: 'Can I run a business in Bali as a foreigner?', answer: 'Yes, through a PT PMA structure that allows foreign ownership in approved business sectors.' },
+      { question: 'How long does the full process take?', answer: 'From planning to operational status, expect 6-10 weeks.' },
+    ],
+  },
+];

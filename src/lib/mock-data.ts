@@ -565,5 +565,6 @@ export const navigationLinks = [
   { name: 'Services', href: '#services' },
   { name: 'Packages', href: '#packages' },
   { name: 'Visas', href: '#visa-services' },
+  { name: 'CSR', href: '/csr' },
   { name: 'Contact', href: '#contact' }
 ];

@@ -30,77 +30,62 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: {
-    default: "Bali Company Formation | PT PMA Registration Indonesia | Business Setup Services",
-    template: "%s | Bali Help"
-  },
-  description: "Expert company formation in Bali and Indonesia. PT PMA registration, NIB & OSS licensing, business setup for foreign investors. Start your company in Bali with our comprehensive services. Fast, reliable, and fully compliant.",
+  title: "Company Formation in Bali | PT PMA Registration & Business Setup Indonesia",
+  description: "Professional company formation and PT PMA registration services in Bali. We help foreign investors establish businesses legally in Indonesia including NIB, OSS, and business licensing.",
   keywords: [
-    "Bali company formation",
-    "PT PMA Indonesia",
+    "company formation bali",
+    "pt pma registration bali",
+    "business registration indonesia",
+    "start company bali",
+    "foreign company indonesia",
     "foreign investment Indonesia",
     "business setup Bali",
     "company registration Indonesia",
     "Indonesian business license",
     "NIB registration",
     "OSS Indonesia",
-    "investor KITAS",
-    "PT PMDN",
-    "Bali business consultant"
+    "investor KITAS"
   ],
-  authors: [{ name: "Bali Help", url: "https://balihelp.com" }],
+  authors: [{ name: "Bali Help", url: "https://balihelp.id" }],
   creator: "Bali Help",
   publisher: "Bali Help",
   robots: {
     index: true,
     follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
   },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://balihelp.com",
-    title: "Bali Company Formation | PT PMA Registration Indonesia | Business Setup Services",
-    description: "Expert company formation in Bali and Indonesia. PT PMA registration, NIB & OSS licensing, business setup for foreign investors.",
+    url: "https://balihelp.id",
+    title: "Company Formation in Bali | PT PMA Registration Indonesia",
+    description: "Start your company in Bali with professional PT PMA registration and business licensing services for foreign investors.",
     siteName: "Bali Help",
     images: [
       {
-        url: "https://balihelp.com/logo.png",
-        width: 512,
-        height: 512,
-        alt: "Bali Help Logo"
+        url: "https://balihelp.id/og-image.webp",
+        width: 1200,
+        height: 630,
+        alt: "Company Formation Bali"
       }
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bali Company Formation | PT PMA Registration Indonesia | Business Setup Services",
-    description: "Expert company formation in Bali and Indonesia. PT PMA registration, NIB & OSS licensing, business setup for foreign investors.",
-    images: ["https://balihelp.com/logo.png"],
-    creator: "@balihelp",
+    title: "Company Formation in Bali | PT PMA Registration Indonesia",
+    description: "Professional company registration and PT PMA setup services in Bali for international entrepreneurs.",
+    images: ["https://balihelp.id/og-image.webp"],
   },
   icons: {
     icon: [
-      { url: "/logo.png", sizes: "any", type: "image/png" },
-      { url: "/favicon.ico", sizes: "32x32", type: "image/x-icon" },
+      { url: "/Logo.webp", sizes: "any", type: "image/webp" },
     ],
     apple: [
-      { url: "/logo.png", sizes: "any", type: "image/png" },
+      { url: "/Logo.webp", sizes: "any", type: "image/webp" },
     ],
   },
   manifest: "/manifest.json",
   alternates: {
-    canonical: "https://balihelp.com",
-    languages: {
-      'en-US': 'https://balihelp.com',
-      'id-ID': 'https://balihelp.com/id',
-    },
+    canonical: "https://balihelp.id/",
   },
   category: "business",
 };
@@ -119,13 +104,16 @@ export default function RootLayout({
         <link rel="alternate" hrefLang="en" href="https://balihelp.com" />
         <link rel="alternate" hrefLang="id" href="https://balihelp.com/id" />
         
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        
         {/* Preconnect to external domains for performance */}
         <link rel="preconnect" href="https://wa.me" />
         <link rel="preconnect" href="https://forms.gle.com" />
         
         {/* Preload critical resources */}
-        <link rel="preload" href="/logo.png" as="image" type="image/png" fetchPriority="high" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preload" href="/Logo.webp" as="image" type="image/webp" fetchPriority="high" />
         
         {/* Service Worker Registration */}
         <script dangerouslySetInnerHTML={{
@@ -142,7 +130,44 @@ export default function RootLayout({
           `,
         }} />
         
-        {/* Structured Data JSON-LD */}
+        {/* Organization Entity Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Bali Help",
+              "url": "https://balihelp.id",
+              "logo": "https://balihelp.id/Logo.webp",
+              "sameAs": ["https://indonesianvisas.com"],
+              "provider": {
+                "@type": "Organization",
+                "name": "PT Indonesian Visas Agency"
+              }
+            }),
+          }}
+        />
+        {/* ProfessionalService Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ProfessionalService",
+              "name": "Bali Help",
+              "url": "https://balihelp.id",
+              "logo": "https://balihelp.id/Logo.webp",
+              "image": "https://balihelp.id/og-image.webp",
+              "description": "Company formation and business registration services in Bali and Indonesia for foreign investors.",
+              "areaServed": "Indonesia",
+              "provider": {
+                "@type": "Organization",
+                "name": "PT Indonesian Visas Agency"
+              }
+            }),
+          }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

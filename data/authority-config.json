@@ -1,0 +1,26 @@
+{
+  "authority_domain": "balihelp.id",
+  "authority_topics": [
+    "company formation indonesia",
+    "pt pma registration",
+    "business licensing indonesia",
+    "foreign investment indonesia",
+    "starting a business in bali",
+    "nib oss registration indonesia",
+    "corporate tax indonesia",
+    "business opportunities bali",
+    "corporate structure indonesia",
+    "foreign company setup indonesia"
+  ],
+  "publisher": "Bali Help",
+  "provider": "PT Indonesian Visas Agency",
+  "ecosystem_domains": [
+    "https://balihelp.id",
+    "https://indonesianvisas.com"
+  ],
+  "content_guidelines": {
+    "tone": "educational, neutral, informative",
+    "avoid": ["guarantee claims", "legal promises", "misleading immigration claims"],
+    "structure": ["clear headings", "FAQ sections", "definition sections", "step-by-step explanations"]
+  }
+}
