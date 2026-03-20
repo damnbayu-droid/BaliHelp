@@ -20,6 +20,9 @@ export default function Footer() {
             <p className="text-sm leading-relaxed">
               Professional company formation and business services in Bali, Indonesia.
             </p>
+            <div className="mt-2">
+              <a href="/site-map" className="text-xs text-purple-400 hover:text-purple-300 transition-colors">Sitemap</a>
+            </div>
           </div>
 
           <div>
@@ -61,9 +64,9 @@ export default function Footer() {
         <div className="border-t border-slate-800 pt-8">
           <div className="text-xs space-y-4">
             <p>
-              <strong className="text-slate-300">Disclaimer:</strong> BaliHelp specializes in company formation and local business services in Bali.
-              Visa services referenced on this site are provided via external partners.
-              We do not guarantee specific outcomes as results depend on individual circumstances and Indonesian regulatory requirements.
+              <strong className="text-slate-300">Disclaimer:</strong> BaliHelp is a specialized division of PT Indonesian Visas Agency focusing on company formation and local business services in Bali.
+              Visa services referenced on this site are provided directly by our unified corporate ecosystem.
+              We do not guarantee specific outcomes as results depend on individual circumstances and Indonesian government regulatory requirements.
             </p>
             <p>
               All services are subject to applicable laws and regulations. Processing times and requirements may change based on government policies.
@@ -76,7 +79,7 @@ export default function Footer() {
               <span className="text-slate-600">|</span>
               <a href="https://indonesianvisas.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">indonesianvisas.com</a>
               <span className="text-slate-600">|</span>
-              <a href="https://indodesign.web" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">indodesign.web</a>
+              <a href="https://indodesign.website" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">indodesign.website</a>
             </div>
             <div className="flex gap-6 text-sm">
               <a href="https://indonesianvisas.com/en/privacy-policy" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Privacy Policy</a>

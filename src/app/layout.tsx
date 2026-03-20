@@ -100,9 +100,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="canonical" href="https://balihelp.com" />
-        <link rel="alternate" hrefLang="en" href="https://balihelp.com" />
-        <link rel="alternate" hrefLang="id" href="https://balihelp.com/id" />
+        <link rel="canonical" href="https://balihelp.id" />
+        <link rel="alternate" hrefLang="en" href="https://balihelp.id" />
+        <link rel="alternate" hrefLang="id" href="https://balihelp.id/id" />
         
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

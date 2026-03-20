@@ -42,6 +42,7 @@ import GoogleReviews from '@/components/google-reviews';
 import InteractiveHeader from '@/components/interactive-header';
 import FormationClientWrapper from '@/components/formation-client-wrapper';
 import { getIconComponent } from '@/lib/icons';
+import ContactForm from '@/components/contact-form';
 
 export default function Home() {
   return (
@@ -327,17 +328,7 @@ export default function Home() {
                   </div>
                 </div>
                 <Card className="p-8">
-                  <h3 className="text-2xl font-bold mb-6">Send Message</h3>
-                  <div className="space-y-4">
-                    <div className="grid grid-cols-2 gap-4">
-                      <Input placeholder="First Name" />
-                      <Input placeholder="Last Name" />
-                    </div>
-                    <Input placeholder="Email Address" type="email" />
-                    <Input placeholder="Phone Number" type="tel" />
-                    <Textarea placeholder="How can we help?" rows={4} />
-                    <Button className="w-full h-12 bg-gradient-to-r from-purple-700 to-orange-600 text-white font-bold rounded-xl shadow-lg">Submit Request</Button>
-                  </div>
+                  <ContactForm />
                 </Card>
               </div>
             </div>

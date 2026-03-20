@@ -38,6 +38,8 @@ export default function CSRPage() {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [currentLanguage, setCurrentLanguage] = useState('en');
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -140,12 +142,12 @@ export default function CSRPage() {
               >
                 {isDarkMode ? <Wind className="w-5 h-5" /> : <Globe className="w-5 h-5" />}
               </Button>
-              <a
-                href="https://wa.me/6285727041992"
+              <button
+                onClick={() => setIsModalOpen(true)}
                 className="hidden sm:inline-flex items-center justify-center h-9 px-4 py-2 rounded-lg bg-green-600 hover:bg-green-700 text-white text-sm font-medium transition-all"
               >
                 Join Mission
-              </a>
+              </button>
               <button
                 className="lg:hidden p-2 text-slate-600 dark:text-slate-300"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -183,10 +185,12 @@ export default function CSRPage() {
               A sustainability initiative by Bali Help, supported and funded by PT Indonesian Visas Agency.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white px-8 rounded-full h-14 text-lg font-semibold">
-                Explore Our Programs
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
+              <a href="/csr/programs" className="flex justify-center">
+                <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white px-8 rounded-full h-14 text-lg font-semibold w-full">
+                  Explore Our Programs
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
+              </a>
               <div className="flex items-center gap-3 justify-center">
                 <ShieldCheck className="w-8 h-8 text-green-400" />
                 <span className="text-sm font-medium">Verified Sustainability Partner</span>
@@ -256,8 +260,8 @@ export default function CSRPage() {
               </div>
               <div className="relative aspect-square rounded-3xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/forest-reforestation.png"
-                  alt="Bali environmental conservation and greenery"
+                  src="/csr-core-philosophy.png"
+                  alt="Bali environmental conservation and sustainable tourism split view"
                   fill
                   className="object-cover"
                 />
@@ -608,7 +612,11 @@ export default function CSRPage() {
           <div className="container px-4 text-center text-white">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">Support the Mission</h2>
             <p className="text-xl mb-12 max-w-2xl mx-auto opacity-90">Your choice to use Bali Help directly funds these initiatives. Every visa, every company setup, contributes to a greener Bali.</p>
-            <Button size="lg" className="bg-white text-green-700 hover:bg-slate-100 rounded-full px-12 h-16 text-xl font-bold">
+            <Button 
+              size="lg" 
+              onClick={() => setIsModalOpen(true)}
+              className="bg-white text-green-700 hover:bg-slate-100 rounded-full px-12 h-16 text-xl font-bold"
+            >
               Join Environmental Mission
               <ArrowRight className="ml-2 w-6 h-6" />
             </Button>
@@ -644,6 +652,48 @@ export default function CSRPage() {
             </div>
           </div>
         </section>
+        {isModalOpen && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fade-in">
+            <div className="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 max-w-md w-full shadow-2xl relative border border-slate-100 dark:border-slate-800 animate-scale-up">
+              <button 
+                onClick={() => setIsModalOpen(false)}
+                className="absolute top-4 right-4 p-2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200"
+              >
+                <X className="w-5 h-5" />
+              </button>
+              
+              <div className="text-center mb-6">
+                <div className="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-2xl flex items-center justify-center mx-auto mb-4 text-green-600">
+                  <Leaf className="w-6 h-6" />
+                </div>
+                <h3 className="text-2xl font-bold text-slate-900 dark:text-white">Join the Mission</h3>
+                <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">Submit your details to start supporting Bali's environment.</p>
+              </div>
+
+              <form className="space-y-4" onSubmit={(e) => { e.preventDefault(); setIsModalOpen(false); alert('Submission Successful! We will contact you soon.'); }}>
+                <div>
+                  <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Full Name</label>
+                  <input type="text" required className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm" placeholder="John Doe" />
+                </div>
+                <div>
+                  <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Email Address</label>
+                  <input type="email" required className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm" placeholder="john@example.com" />
+                </div>
+                <div>
+                  <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Contact Number</label>
+                  <input type="text" className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm" placeholder="+12345678" />
+                </div>
+                <div>
+                  <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Notes</label>
+                  <textarea rows={3} className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm" placeholder="How would you like to contribute?" />
+                </div>
+                <Button type="submit" className="w-full bg-green-600 hover:bg-green-700 text-white rounded-xl h-11 font-bold mt-2">
+                  Submit Contribution
+                </Button>
+              </form>
+            </div>
+          </div>
+        )}
       </main>
 
       <Footer />

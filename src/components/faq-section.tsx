@@ -5,7 +5,24 @@ import { Badge } from '@/components/ui/badge';
 import { ChevronDown, Check } from 'lucide-react';
 import { faqData } from '@/lib/faq-data';
 
-export default function FAQSection() {
+interface FAQItem {
+  id: string;
+  question: string;
+  answer: string;
+  category?: string;
+}
+
+interface FAQSectionProps {
+  items?: FAQItem[];
+  title?: string;
+  subtitle?: string;
+}
+
+export default function FAQSection({
+  items = faqData as FAQItem[],
+  title = "Frequently Asked Questions",
+  subtitle = "Common questions about company formation in Indonesia. Can't find your answer? We're here to help."
+}: FAQSectionProps) {
   return (
     <section
       id="faq"
@@ -21,17 +38,17 @@ export default function FAQSection() {
             id="faq-heading"
             className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4"
           >
-            Everything You Need to Know
+            {title}
           </h2>
           <p className="text-lg text-slate-600 dark:text-slate-300">
-            Common questions about company formation in Indonesia. Can't find your answer? We're here to help.
+            {subtitle}
           </p>
         </div>
 
         <div className="max-w-4xl mx-auto">
           <Accordion type="single" collapsible className="space-y-4">
-            {faqData.map((faq, index) => (
-              <AccordionItem key={faq.id} value={`item-${index}`}>
+            {items.map((faq, index) => (
+              <AccordionItem key={faq.id || index} value={`item-${index}`}>
                 <AccordionTrigger className="hover:no-underline">
                   <div className="flex items-center justify-between w-full p-6 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-purple-300 dark:hover:border-purple-700 transition-all">
                     <div className="flex items-center gap-3 text-left">
