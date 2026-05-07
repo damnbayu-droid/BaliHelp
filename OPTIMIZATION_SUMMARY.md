@@ -393,39 +393,22 @@
 
 ---
 
-### 17. **Compliance & Standards**
-
-#### ✅ WCAG 2.1 AA
-- Level AA contrast ratios (4.5:1)
-- Keyboard accessibility
-- Screen reader compatibility
-- Screen resize adaptability
-
-#### ✅ GDPR & Privacy
-- Data protection measures
-- Cookie policy
-- Privacy policy
-- User consent management
-
-#### ✅ Security Best Practices
-- Input validation
-- XSS prevention
-- HTTPS enforcement
-- Secure API calls
-
 ---
 
-### 18. **Summary**
+### 19. **🛡️ Ecosystem Hardening (v4.2)**
 
-All requested features have been successfully implemented and optimized:
+#### ✅ Transactional Peak Alignment
+- **Flagship Funneling**: All visa services are funneled to `indonesianvisas.com`.
+- **Button Optimization**: Integrated "Process via IndonesianVisas.com" CTAs in all visa modals.
+- **CTA Hardening**: Added secondary path to flagship hub in main CTA sections.
 
-✅ **Header**: Icon logo removed, text/logo displayed appropriately on desktop/mobile
-✅ **Mobile Mode**: Logo image-only display on mobile, slide-down CTA after 3s
-✅ **Mobile CTA**: Hold 3s to change language, click for theme toggle
-✅ **Performance**: Fast loading, optimized assets, service worker
-✅ **SEO Gold**: Comprehensive meta tags, structured data, sitemap
-✅ **Accessibility**: WCAG AA compliant, keyboard navigation, screen reader support
-✅ **Mobile Friendly**: Touch-optimized, responsive design, mobile-first approach
-✅ **User & Desktop Friendly**: Consistent experience across all devices
+#### ✅ JSON-LD Master Node Sync
+- **Parent Organization**: Linked all schemas to `PT Indonesian Visas Agency™ (MYVISA)` (@id: `https://indonesianvisas.com/#organization`).
+- **Legal Data Accuracy**: Synced NIB, AHU, and taxID across all structured data.
+- **E-E-A-T signals**: Enhanced Founder block and added historical "Since 2010" signals.
 
-**The page is now fully optimized for production!** 🚀
+#### ✅ Network & Performance Hardening
+- **Resource Preconnect**: Added ecosystem domains to `preconnect` and `dns-prefetch` headers.
+- **Historical Branding**: Integrated "Operating Since 2010" badges for authority boosting.
+
+**The page is now fully hardened and synced with the Bali Enterprises Group ecosystem!** 🚀

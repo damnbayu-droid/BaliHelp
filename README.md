@@ -1,6 +1,11 @@
-# Bali Help - Company Formation Website
-
 A comprehensive, production-ready Next.js 16 website for company formation and business setup services in Bali, Indonesia. Built with modern web technologies and optimized for performance, SEO, and accessibility.
+
+## 🛡️ Ecosystem Integration (v4.2)
+BaliHelp is a specialized **Lifestyle & Emergency Concierge** node within the **Bali Enterprises Group** ecosystem. This project is technically hardened and synced with the global master node architecture:
+- **Transactional Hub**: All visa and immigration actions are funneled to [IndonesianVisas.com](https://indonesianvisas.com).
+- **Master Identity**: Officially linked to **PT Indonesian Visas Agency™ (MYVISA)** (NIB: 0402260034806).
+- **Historical Authority**: Operating since 2010, maintaining the legacy and trust of the "Bali Help" brand.
+- **JSON-LD Hardened**: Fully compliant with `GLOBAL_DATA_SYNC.md` standards for maximum search authority.
 
 ## 🎨 Design System
 
