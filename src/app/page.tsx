@@ -68,6 +68,11 @@ export default function Home() {
                   Licensed & Compliant Services
                 </Badge>
 
+                <Badge variant="outline" className="inline-flex items-center gap-2 px-4 py-2 rounded-full border-purple-300 dark:border-purple-700 text-purple-700 dark:text-purple-300 text-sm font-medium mb-6 ml-0 sm:ml-2">
+                  <Clock className="w-4 h-4" />
+                  Operating Since 2010
+                </Badge>
+
                 <h1
                   id="hero-heading"
                   className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 dark:text-white leading-tight mb-6"
@@ -123,8 +128,8 @@ export default function Home() {
           <section id="why-bali" className="py-20 lg:py-28 bg-white dark:bg-slate-900">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center max-w-3xl mx-auto mb-16">
-                <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4">Why Choose Bali Help</h2>
-                <p className="text-lg text-slate-600 dark:text-slate-300">Indonesia&apos;s digital economy is booming, and Bali offers the perfect blend of business opportunity and lifestyle.</p>
+                <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4">Why Choose Bali Help (Since 2010)</h2>
+                <p className="text-lg text-slate-600 dark:text-slate-300">With over 15 years of experience, we provide the perfect blend of local expertise, business opportunity, and lifestyle support.</p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                 {whyBaliData.map((item) => (

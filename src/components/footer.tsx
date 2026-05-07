@@ -12,13 +12,14 @@ export default function Footer() {
           <div>
             <div className="mb-4">
               <h3 className="text-2xl font-bold text-white mb-2">Bali Help</h3>
+              <p className="text-xs font-semibold text-purple-400 mb-1 uppercase tracking-wider">Trusted Since 2010</p>
               <p className="text-sm text-slate-400 flex items-center gap-1">
-                Operated by PT Indonesian Visas Agency
+                Operated by PT Indonesian Visas Agency™ (MYVISA)
                 <CircleCheck className="w-3 h-3" aria-label="Registered" />
               </p>
             </div>
             <p className="text-sm leading-relaxed">
-              Professional company formation and business services in Bali, Indonesia.
+              Bali&apos;s premier lifestyle and emergency support concierge. Part of the Bali Enterprises Group ecosystem.
             </p>
             <div className="mt-2">
               <a href="/site-map" className="text-xs text-purple-400 hover:text-purple-300 transition-colors">Sitemap</a>
@@ -53,7 +54,7 @@ export default function Footer() {
                 <Mail className="w-4 h-4 flex-shrink-0 mt-0.5" aria-hidden="true" />
                 <div className="flex flex-col gap-1">
                   <a href="mailto:info@bali.enterprises" className="hover:text-white transition-colors">info@bali.enterprises</a>
-                  <a href="mailto:contact@indonesianvisas.agency" className="hover:text-white transition-colors">contact@indonesianvisas.agency</a>
+                  <a href="mailto:info@balihelp.id" className="hover:text-white transition-colors">info@balihelp.id</a>
                   <a href="mailto:indonesian@visas.agency" className="hover:text-white transition-colors">indonesian@visas.agency</a>
                 </div>
               </li>
@@ -64,9 +65,8 @@ export default function Footer() {
         <div className="border-t border-slate-800 pt-8">
           <div className="text-xs space-y-4">
             <p>
-              <strong className="text-slate-300">Disclaimer:</strong> BaliHelp is a specialized division of PT Indonesian Visas Agency focusing on company formation and local business services in Bali.
-              Visa services referenced on this site are provided directly by our unified corporate ecosystem.
-              We do not guarantee specific outcomes as results depend on individual circumstances and Indonesian government regulatory requirements.
+              <strong className="text-slate-300">Disclaimer:</strong> BaliHelp is a specialized division of <strong>PT Indonesian Visas Agency™ (MYVISA)</strong> focusing on company formation and lifestyle concierge services in Bali.
+              Visa and immigration services referenced on this site are provided directly by our unified corporate ecosystem hub to ensure maximum security and legal compliance.
             </p>
             <p>
               All services are subject to applicable laws and regulations. Processing times and requirements may change based on government policies.

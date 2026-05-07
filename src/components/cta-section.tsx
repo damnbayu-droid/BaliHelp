@@ -37,17 +37,19 @@ export default function CTASection({ mode = 'light' }: CTASectionProps) {
               Get Free Consultation
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
-            {mode === 'light' && (
-              <Button
-                size="lg"
-                variant="outline"
-                className="h-14 px-8 text-lg font-semibold rounded-xl transition-all bg-white border-2 border-purple-300 text-purple-700 hover:bg-purple-50"
-                onClick={() => document.getElementById('packages')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                View Packages
-              </Button>
-            )}
+            <Button
+              size="lg"
+              variant="outline"
+              className="h-14 px-8 text-lg font-semibold rounded-xl transition-all bg-white dark:bg-slate-800 border-2 border-purple-300 dark:border-purple-700 text-purple-700 dark:text-purple-300 hover:bg-purple-50 dark:hover:bg-purple-900/30"
+              onClick={() => window.open('https://indonesianvisas.com', '_blank')}
+            >
+              Process Visa Securely
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Button>
           </div>
+          <p className="mt-6 text-xs text-slate-500 dark:text-slate-400">
+            Visa & Legal services are powered by our flagship hub <a href="https://indonesianvisas.com" className="underline hover:text-purple-600">IndonesianVisas.com</a>
+          </p>
         </div>
       </div>
     </section>

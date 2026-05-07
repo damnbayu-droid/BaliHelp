@@ -244,9 +244,38 @@ Successfully implemented all requested changes to the Bali Help website includin
    - Visit/Tourist Visa
    - Single-Entry Visa
    - Multiple-Entry Visa
-   - KITAS/KITAP/Citizenship
-✅ Added comprehensive popups for all new Visa Services cards
-✅ Maintained purple dark gradient theme
-✅ Kept yellow-orange-red gradient buttons
-✅ All sections fully responsive
-✅ All existing popups preserved and working
+## 🛡️ Ecosystem Hardening & JSON-LD Alignment (v4.2)
+**Date**: 2026-05-07
+**Context**: Migration and integration into the Bali Enterprises Group ecosystem.
+
+### 1. JSON-LD Intelligence Sync
+- **Standard**: Aligned with `GLOBAL_DATA_SYNC.md` v4.2.
+- **Parent Organization**: Explicitly linked to `PT Indonesian Visas Agency™ (MYVISA)` with `@id: https://indonesianvisas.com/#organization`.
+- **Legal Data Sync**:
+    - **NIB**: `0402260034806`
+    - **AHU**: `AHU-00065.AH.02.01.TAHUN 2020`
+    - **taxID**: `0100000008117681` (Raw 16-digit)
+- **Historical Context**: Inserted `foundingDate: "2010"` and legacy support signals.
+- **E-E-A-T Hardening**: Unified Founder block for **Bayu Damopolii-Manoppo**.
+
+### 2. Transactional Peak Implementation
+- **Mandate**: All high-intent "Money Actions" for Visas are funneled to the flagship hub.
+- **Visa Services Section**: Updated modal buttons to "Process via IndonesianVisas.com" with external redirects.
+- **CTA Section**: Added secondary "Process Visa Securely" path leading to the ecosystem flagship.
+- **Footer**: Refined disclaimer and added ecosystem links.
+
+### 3. Performance Hardening
+- **Network Optimization**: Added `preconnect` and `dns-prefetch` for ecosystem domains:
+    - `indonesianvisas.com`
+    - `bali.enterprises`
+    - `indodesign.website`
+- **Asset Preloading**: Verified critical paths for logos and icons.
+
+### 4. UI/UX Authority Signals
+- **Hero Section**: Added "Operating Since 2010" badge.
+- **Why Choose Section**: Integrated historical expertise ("Since 2010").
+- **Footer**: Added "Trusted Since 2010" branding.
+
+---
+**Status**: ✅ ECOSYSTEM HARDENING COMPLETE.
+**Security Mode**: Publicly Synced.

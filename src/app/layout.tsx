@@ -108,6 +108,14 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
         
+        {/* Preconnect to ecosystem domains for performance and transactional flow */}
+        <link rel="preconnect" href="https://indonesianvisas.com" />
+        <link rel="preconnect" href="https://bali.enterprises" />
+        <link rel="preconnect" href="https://indodesign.website" />
+        <link rel="dns-prefetch" href="https://indonesianvisas.com" />
+        <link rel="dns-prefetch" href="https://bali.enterprises" />
+        <link rel="dns-prefetch" href="https://indodesign.website" />
+        
         {/* Preconnect to external domains for performance */}
         <link rel="preconnect" href="https://wa.me" />
         <link rel="preconnect" href="https://forms.gle.com" />
@@ -130,44 +138,6 @@ export default function RootLayout({
           `,
         }} />
         
-        {/* Organization Entity Schema */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "Bali Help",
-              "url": "https://balihelp.id",
-              "logo": "https://balihelp.id/Logo.webp",
-              "sameAs": ["https://indonesianvisas.com"],
-              "provider": {
-                "@type": "Organization",
-                "name": "PT Indonesian Visas Agency"
-              }
-            }),
-          }}
-        />
-        {/* ProfessionalService Schema */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "ProfessionalService",
-              "name": "Bali Help",
-              "url": "https://balihelp.id",
-              "logo": "https://balihelp.id/Logo.webp",
-              "image": "https://balihelp.id/og-image.webp",
-              "description": "Company formation and business registration services in Bali and Indonesia for foreign investors.",
-              "areaServed": "Indonesia",
-              "provider": {
-                "@type": "Organization",
-                "name": "PT Indonesian Visas Agency"
-              }
-            }),
-          }}
-        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

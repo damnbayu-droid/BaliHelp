@@ -1,106 +1,130 @@
 // Structured Data for SEO - Bali Help
+// Aligned with Bali Enterprises Group Master Intelligence Node v4.2
+
+const MASTER_NODE_ID = 'https://indonesianvisas.com/#organization';
+const BALIHELP_ID = 'https://balihelp.id/#organization';
 
 export const organizationSchema = {
   '@context': 'https://schema.org',
-  '@type': 'Organization',
-  name: 'Bali Help',
-  description: 'Your premier service for seamless company formation and business setup in Bali',
+  '@type': 'LocalBusiness',
+  '@id': BALIHELP_ID,
+  name: 'BaliHelp — Lifestyle & Emergency Concierge',
   url: 'https://balihelp.id',
-  logo: 'https://balihelp.id/logo.png',
-  contactPoint: {
-    '@type': 'ContactPoint',
-    telephone: '+62-361-123-4567',
-    contactType: 'customer service',
-    email: 'info@balihelp.id',
-    availableLanguage: ['English', 'Indonesian']
-  },
+  logo: 'https://balihelp.id/Logo.webp',
+  image: 'https://balihelp.id/og-image.webp',
+  description: "Bali's premier lifestyle and emergency support (Operating since 2010). Originally founded as 'Bali Help' in 2010 to assist expats and tourists with emergency concierge and legal support. Official partner of PT Indonesian Visas Agency.",
+  foundingDate: '2010',
+  telephone: '+62-857-2704-1992',
+  email: 'info@balihelp.id',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'Jl. Raya Ubud No. 123',
-    addressLocality: 'Gianyar',
+    streetAddress: 'Jl. Tibungsari No.11C, Padangsambian Kaja',
+    addressLocality: 'Denpasar Barat, Denpasar',
     addressRegion: 'Bali',
-    postalCode: '80571',
-    addressCountry: 'ID'
-  },
-  sameAs: [
-    'https://www.facebook.com/balihelp',
-    'https://www.instagram.com/balihelp',
-    'https://www.linkedin.com/company/balihelp'
-  ]
-};
-
-export const localBusinessSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  name: 'Bali Help - Company Formation Services',
-  image: 'https://balihelp.id/og-image.png',
-  priceRange: '$$ - $$$',
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: 'Jl. Raya Ubud No. 123',
-    addressLocality: 'Gianyar',
-    addressRegion: 'Bali',
-    postalCode: '80571',
+    postalCode: '80117',
     addressCountry: 'ID'
   },
   geo: {
     '@type': 'GeoCoordinates',
-    latitude: -8.5069,
-    longitude: 115.2625
+    latitude: -8.6653,
+    longitude: 115.1764
   },
-  openingHoursSpecification: {
-    '@type': 'OpeningHoursSpecification',
-    dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-    opens: '09:00',
-    closes: '17:00'
+  parentOrganization: {
+    '@type': 'Corporation',
+    '@id': MASTER_NODE_ID,
+    name: 'PT Indonesian Visas Agency™ (MYVISA)',
+    legalName: 'PT Indonesian Visas Agency™ (MYVISA)',
+    taxID: '0100000008117681',
+    url: 'https://indonesianvisas.com'
   },
-  telephone: '+62-361-123-4567',
-  email: 'info@balihelp.id'
+  contactPoint: [
+    {
+      '@type': 'ContactPoint',
+      telephone: '+62-857-2704-1992',
+      contactType: 'customer service',
+      areaServed: 'ID',
+      availableLanguage: ['English', 'Indonesian']
+    },
+    {
+      '@type': 'ContactPoint',
+      email: 'balihelp2019@gmail.com',
+      contactType: 'Legacy Support'
+    }
+  ],
+  identifier: [
+    { '@type': 'PropertyValue', 'name': 'NIB', 'value': '0402260034806' },
+    { '@type': 'PropertyValue', 'name': 'AHU', 'value': 'AHU-00065.AH.02.01.TAHUN 2020' },
+    { '@type': 'PropertyValue', 'name': 'SKT', 'value': 'S-04449/SKT-WP-CT/KPP.1701/2026' }
+  ],
+  founder: {
+    '@type': 'Person',
+    name: 'Bayu Damopolii-Manoppo',
+    jobTitle: 'Founder & Strategic Director',
+    url: 'https://www.linkedin.com/in/balihelp/',
+    sameAs: ['https://www.linkedin.com/in/bayu-damopolii-887ab883/']
+  },
+  sameAs: [
+    'https://indonesianvisas.com',
+    'https://www.instagram.com/balihelp.id',
+    'https://maps.app.goo.gl/p6t9JSd5CGCDf7jZA',
+    'https://x.com/IndonesianVisas'
+  ],
+  knowsAbout: [
+    'Bali Emergency Assistance',
+    'Bali Concierge Services',
+    'Bali Expat Support',
+    'Company Formation Indonesia',
+    'Indonesian Visa Regulations'
+  ]
 };
 
+// Main Service Catalog
 export const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  name: 'Company Formation Services in Indonesia',
-  description: 'Complete company formation services including PT PMA registration, business licensing, tax compliance, and visa support for foreign investors in Indonesia',
+  name: 'Bali Concierge & Business Setup Support',
+  description: 'Comprehensive lifestyle, emergency, and business setup concierge in Bali. Operating since 2010.',
   provider: {
-    '@type': 'Organization',
-    name: 'Bali Help'
+    '@id': BALIHELP_ID
   },
   areaServed: {
     '@type': 'Place',
-    name: 'Indonesia'
+    name: 'Bali, Indonesia'
   },
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
-    name: 'Company Formation Services',
+    name: 'Bali Concierge Services',
     itemListElement: [
       {
         '@type': 'Offer',
         itemOffered: {
           '@type': 'Service',
-          name: 'PT PMA Registration'
+          name: 'Emergency Legal & Police Assistance',
+          description: 'First-response legal and emergency coordination for expats and tourists.'
         }
       },
       {
         '@type': 'Offer',
         itemOffered: {
           '@type': 'Service',
-          name: 'Business Licensing'
+          name: 'Company Formation Support',
+          description: 'Initial consultation and setup for PT PMA and Local PT, funneled to PT Indonesian Visas Agency for processing.'
         }
       },
       {
         '@type': 'Offer',
         itemOffered: {
           '@type': 'Service',
-          name: 'Tax & Compliance'
+          name: 'Digital Nomad Hub',
+          description: 'Office space, E-SIM, and relocation logistics for remote workers.'
         }
       },
       {
         '@type': 'Offer',
         itemOffered: {
           '@type': 'Service',
-          name: 'Visa Services'
+          name: 'Luxury & Lifestyle Concierge',
+          description: 'Home service massage, wellness, and premium Bali experiences.'
         }
       }
     ]
@@ -113,42 +137,26 @@ export const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'What is PT PMA?',
+      name: 'Is Bali Help a licensed company?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'PT PMA (Penanaman Modal Asing) is a foreign-owned limited liability company in Indonesia that allows up to 100% foreign ownership in most business sectors.'
+        text: 'Yes, Bali Help is an official partner and brand under PT Indonesian Visas Agency™ (MYVISA) (NIB: 0402260034806), which has been operating since 2010.'
       }
     },
     {
       '@type': 'Question',
-      name: 'How long does it take to register a company in Indonesia?',
+      name: 'How does Bali Help assist with visas?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Company registration typically takes 4-8 weeks for PT PMA and 3-6 weeks for local PT companies, depending on the complexity and requirements.'
+        text: 'Bali Help provides first-hand concierge support and redirects all professional visa processing to our ecosystem flagship, indonesianvisas.com, for secure handling.'
       }
     },
     {
       '@type': 'Question',
-      name: 'What is the minimum capital requirement for PT PMA?',
+      name: 'What makes Bali Help unique?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'The minimum capital requirement for PT PMA varies by business sector, generally starting from 2.5 billion IDR for investment-based KITAS eligibility.'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'Can foreigners own 100% of an Indonesian company?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes, foreigners can own 100% of a PT PMA in most business sectors, with some exceptions in restricted sectors that require local partnership.'
-      }
-    },
-    {
-      '@type': 'Question',
-      name: 'What is NIB and why do I need it?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'NIB (Nomor Induk Berusaha) is a Business Identification Number that serves as your company\'s official business license. It\'s mandatory for all businesses in Indonesia and is obtained through the OSS system.'
+        text: 'With over 15 years of experience in Bali, we offer "boots on the ground" emergency and lifestyle support that combined with the legal authority of PT Indonesian Visas Agency™ (MYVISA).'
       }
     }
   ]
@@ -167,27 +175,20 @@ export const breadcrumbSchema = {
     {
       '@type': 'ListItem',
       position: 2,
-      name: 'Services',
+      name: 'Lifestyle Services',
       item: 'https://balihelp.id#services'
     },
     {
       '@type': 'ListItem',
       position: 3,
-      name: 'Pricing',
+      name: 'Business Support',
       item: 'https://balihelp.id#packages'
-    },
-    {
-      '@type': 'ListItem',
-      position: 4,
-      name: 'Contact',
-      item: 'https://balihelp.id#contact'
     }
   ]
 };
 
 export const getAllStructuredData = () => [
   organizationSchema,
-  localBusinessSchema,
   serviceSchema,
   faqSchema,
   breadcrumbSchema

@@ -153,13 +153,19 @@ export default function VisaServicesSection() {
                     </div>
                   </div>
 
-                  <Button
-                    className="w-full bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500 hover:from-yellow-600 hover:via-orange-600 hover:to-red-600 text-white h-12 text-lg font-semibold"
-                    onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                  <a 
+                    href="https://indonesianvisas.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="w-full"
                   >
-                    Apply for {visa.title}
-                    <ArrowRight className="ml-2 w-4 h-4" />
-                  </Button>
+                    <Button
+                      className="w-full bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500 hover:from-yellow-600 hover:via-orange-600 hover:to-red-600 text-white h-12 text-lg font-semibold"
+                    >
+                      Process via IndonesianVisas.com
+                      <ExternalLink className="ml-2 w-4 h-4" />
+                    </Button>
+                  </a>
                 </div>
               </DialogContent>
             </Dialog>
