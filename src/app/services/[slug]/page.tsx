@@ -116,20 +116,22 @@ export default function ServiceDetailPage({ params: paramsPromise }: { params: P
 
             <div className="space-y-10">
               {/* Included Section */}
-              <section>
-                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
-                  <ShieldCheck className="w-5 h-5 text-purple-600" />
-                  What&apos;s Included
-                </h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {service.included.map((item, i) => (
-                    <div key={i} className="flex items-start gap-2 p-3 rounded-lg bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700/50 shadow-sm">
-                      <Check className="w-4 h-4 text-green-500 mt-1 shrink-0" />
-                      <span className="text-sm text-slate-700 dark:text-slate-300">{item}</span>
-                    </div>
-                  ))}
-                </div>
-              </section>
+              {service && 'included' in service && (
+                <section>
+                  <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
+                    <ShieldCheck className="w-5 h-5 text-purple-600" />
+                    What&apos;s Included
+                  </h3>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    {(service as any).included.map((item: string, i: number) => (
+                      <div key={i} className="flex items-start gap-2 p-3 rounded-lg bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700/50 shadow-sm">
+                        <Check className="w-4 h-4 text-green-500 mt-1 shrink-0" />
+                        <span className="text-sm text-slate-700 dark:text-slate-300">{item}</span>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+              )}
 
               {/* Requirements Section */}
               <section>
