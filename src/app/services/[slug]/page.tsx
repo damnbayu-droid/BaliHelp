@@ -1,5 +1,7 @@
 'use client';
 
+export const runtime = 'edge';
+
 import React, { useState, use } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import { lifestyleServicesDetailed } from '@/lib/services-data';
