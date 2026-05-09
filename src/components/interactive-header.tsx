@@ -2,10 +2,11 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { Globe, Menu, X, ArrowRight, Phone } from 'lucide-react';
+import { Globe, Menu, X, ArrowRight } from 'lucide-react';
 import { navigationLinks } from '@/lib/mock-data';
 import LanguageDropdown from './language-dropdown';
 import { Button } from './ui/button';
+import UniversalContactModal from './universal-contact-modal';
 
 export default function InteractiveHeader() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -13,7 +14,6 @@ export default function InteractiveHeader() {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [currentLanguage, setCurrentLanguage] = useState('en');
   const [activeSection, setActiveSection] = useState('hero');
-  const [showLanguageMenu, setShowLanguageMenu] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -70,9 +70,13 @@ export default function InteractiveHeader() {
                 </div>
               </div>
             </div>
-            <a href="https://wa.me/6285727041992" className="hidden sm:inline-flex items-center justify-center gap-2 text-sm font-medium h-9 px-4 py-2 rounded-lg bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500 text-white shadow-lg transition-all hover:shadow-xl">
-              Contact Us <ArrowRight className="w-4 h-4" />
-            </a>
+            
+            <UniversalContactModal>
+              <Button className="hidden sm:inline-flex items-center justify-center gap-2 text-sm font-medium h-10 px-6 py-2 rounded-xl bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500 text-white shadow-lg transition-all hover:shadow-xl hover:scale-105 active:scale-95">
+                Contact Us <ArrowRight className="w-4 h-4" />
+              </Button>
+            </UniversalContactModal>
+
             <button className="lg:hidden p-2 rounded-lg text-slate-600 dark:text-slate-300" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
               {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
